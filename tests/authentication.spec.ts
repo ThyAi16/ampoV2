@@ -468,7 +468,7 @@ test.describe('Verify forgot password', () => {
     // Verify the error message text
     await expect(errorMessage).toHaveText("Your verification code does not exist");
    })
-   test('Testcase 35: Fill in the old OTP code', async({page}) => {
+   test('Testcase 35: Request to send OTP code more than 5 times in 10 minutes', async({page}) => {
     await page.getByText('Quên mật khẩu').click();
     await page.waitForTimeout(500);
     await page.getByPlaceholder('Nhập số điện thoại').fill('0352864299');
